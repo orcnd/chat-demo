@@ -49,8 +49,6 @@ body {
   border-bottom-left-radius: 0;
 }
 </style>
-
-
  
 <main class="form-signin">
   <form action="{{route('loginAction')}}" hx-trigger="submit" hx-target="#main" hx-post="{{route('loginAction')}}" 
