@@ -46,18 +46,11 @@
     }
     
     htmx.on("htmx:load", function(evt) {
-        if (stickToBottom && $(evt.target).hasClass('messageList')){
+        if ($(evt.target).hasClass('messageList')){
             window.scrollTo(0, document.body.scrollHeight);
             stickToBottom=true;
         }
     });
     getUpdateAction();
-    
-    var stickToBottom=true;
-
-    window.onscroll = function() {
-        stickToBottom=false;
-    };
-
 
 </script>
