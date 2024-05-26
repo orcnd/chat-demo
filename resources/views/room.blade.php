@@ -6,23 +6,26 @@
     </div>
 
     <div class="row">
-        <div class="col">
+        <div class="col border border-secondary">
               <div id="messageList"
+              class="gap-1"
               hx-get="{{route('messages')}}" sse-swap="innerHTML"
-                hx-trigger="newMessage"
-                placeholder="loading"
-              >
+                hx-trigger="newMessage" placeholder="loading">
                 
             </div>
         </div>
     </div>
 
-    <hr>
-    <div class="row">
+</div>
+<div class="fixed-bottom bg-white">
+<div class="container">
+    <div class="row ">
         <div class="col">
+            <hr>
             @include('messageSend')
         </div>
     </div>
+</div>
 </div>
 
 <script>
