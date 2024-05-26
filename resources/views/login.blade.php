@@ -52,11 +52,9 @@ body {
  
 <main class="form-signin">
   <form action="{{route('loginAction')}}" hx-trigger="submit" hx-target="#main" hx-post="{{route('loginAction')}}" 
-   hx-target="#main"
-   >
+   hx-target="#main" >
   @csrf
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
     <div class="form-floating">
       <input type="text" class="form-control
        @error('name') is-invalid @enderror
