@@ -98,7 +98,7 @@ class Controller extends BaseController
         return view(
             'messages', 
             [
-                'messages' => Message::latest()->take(25)->get(),
+                'messages' => Message::latest()->take(25)->get()->reverse()->values(),
                 'user' => $this->_getUser()
             ]
         );

@@ -16,17 +16,16 @@
         </div>
     </div>
 
-</div>
-<div class="fixed-bottom bg-white">
-<div class="container">
-    <div class="row ">
+    <div class="row sticky-bottom bg-white ">
         <div class="col">
             <hr>
             @include('messageSend')
         </div>
     </div>
+
 </div>
-</div>
+
+
 
 <script>
     var lastUpdate=-1;
@@ -46,6 +45,16 @@
         });
     }
     
+    var stickToBottom=true;
+    htmx.on("htmx:load", function(evt) {
+        if (stickToBottom && $(evt.target).hasClass('messageList')){
+            window.scrollTo(0, document.body.scrollHeight);
+            stickToBottom=false;
+        }
+        
+    });
     getUpdateAction();
+    
+
 
 </script>

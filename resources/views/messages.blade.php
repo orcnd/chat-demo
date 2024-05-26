@@ -1,5 +1,5 @@
 
-<div class="vstack gap-0 mx-auto">
+<div class="vstack gap-0 mx-auto messageList">
     @foreach ($messages as $message)
     <div class="{{$user==$message->name?'ms':'me'}}-auto">
         <div class="alert alert-{{$user==$message->name?'primary':'secondary'}} gap-0 p-1" role="alert">
